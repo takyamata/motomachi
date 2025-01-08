@@ -1,0 +1,19 @@
+@use "@mixin" as *;
+
+.wrapper {
+    container-name: layout;
+    container-type: inline-size;
+    min-height: 100svh;
+    position: relative;
+}
+.inner {
+    display: grid;
+    @include pc {
+        grid-template-columns: 1fr 41rem min(21.53cqw, 35rem);
+        column-gap: min(2.78cqw, 4rem);
+    }
+    @include tb {
+        grid-template-columns: 41rem 1fr;
+        column-gap: 2.78cqw;
+    }
+}

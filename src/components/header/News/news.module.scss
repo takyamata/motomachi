@@ -1,0 +1,25 @@
+@use "@mixin" as *;
+
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.749rem;
+}
+.ul {
+}
+.li {
+}
+.date,
+.text {
+    @include fts(13.12, 19.68);
+    @include ls(0);
+    font-weight: 500;
+    color: white;
+}
+.date {
+}
+.text {
+    font-family: "Noto Sans JP";
+}

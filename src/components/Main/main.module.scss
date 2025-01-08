@@ -1,11 +1,6 @@
 @use "@mixin" as *;
 
 .main {
-    background-color: aqua;
-    width: var(--main-width);
-    height: 657.3rem;
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    min-height: 100svh;
 }

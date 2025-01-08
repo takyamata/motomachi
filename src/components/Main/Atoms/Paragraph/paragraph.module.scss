@@ -1,0 +1,14 @@
+@use "@mixin" as *;
+
+.paragraph {
+    @include fts(15.31, 30.61);
+    @include ls(50);
+    font-weight: 500;
+    white-space: pre-line;
+    &.green {
+        color: var(--primary_color);
+    }
+    &.white {
+        color: var(--white);
+    }
+}

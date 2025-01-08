@@ -1,0 +1,41 @@
+@use "@mixin" as *;
+
+.concept {
+    background-color: var(--primary_color);
+    width: 100%;
+    padding: 8.747rem 0 9.621rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.499rem;
+}
+.lead {
+    padding: 0 3.28rem;
+    > * {
+        &:nth-child(1) {
+            margin-bottom: 3.499rem;
+        }
+    }
+}
+.card {
+    padding: 0 2.187rem;
+    > * {
+        &:nth-child(odd) {
+            rotate: 2deg;
+        }
+        &:nth-child(even) {
+            rotate: -2deg;
+        }
+        &:nth-child(2) {
+            transform: translateY(-1rem);
+        }
+        &:nth-child(3) {
+            transform: translateY(-2rem);
+        }
+        &:nth-child(4) {
+            transform: translateY(-3rem);
+        }
+        &:nth-child(5) {
+            transform: translateY(-5rem);
+        }
+    }
+}

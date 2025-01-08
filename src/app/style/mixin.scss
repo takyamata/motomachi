@@ -1,14 +1,22 @@
 @use "sass:math";
-// SP幅
-@mixin query($size) {
-    @media screen and (max-width: 834px) {
+
+@mixin pc {
+    @container layout (min-width: 1024px) {
         @content;
     }
 }
-
-// デスクトップ幅
-@mixin query_min($size) {
-    @media screen and (min-width: #{$size}px) {
+@mixin tb {
+    @container layout (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+@mixin tb-down {
+    @container layout (max-width: 1023px) {
+        @content;
+    }
+}
+@mixin sp {
+    @container layout (max-width: 767px) {
         @content;
     }
 }

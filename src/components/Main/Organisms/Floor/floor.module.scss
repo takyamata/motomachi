@@ -1,0 +1,131 @@
+@use "@mixin" as *;
+
+.floor {
+    padding: 6.997rem 0 9.621rem;
+}
+.h2 {
+    @include fts(78.72, 78.72);
+    @include ls(10);
+    font-weight: 200;
+    color: var(--primary_color);
+    white-space: nowrap;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.697rem;
+    transform: translateY(-1.5rem);
+}
+.detail {
+    padding: 0 2.187rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.499rem;
+}
+.image {
+    width: 100%;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+.info {
+    padding: 0 1.312rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 3.125rem;
+    row-gap: 4.373rem;
+}
+.place {
+    span {
+        @include fts(15.31, 18.37);
+        @include ls(10);
+        font-weight: 500;
+        color: var(--primary_color);
+        white-space: pre-line;
+    }
+    b {
+        @include fts(43.73, 43.72);
+        @include ls(10);
+        font-weight: 500;
+        color: var(--primary_color);
+    }
+    i {
+        @include fts(26.24, 26.24);
+        @include ls(10);
+        font-weight: 500;
+        color: var(--primary_color);
+    }
+}
+.document {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.312rem;
+}
+.aside {
+    @include fts(15.31, 27.55);
+    @include ls(40);
+    font-weight: 500;
+    color: var(--primary_color);
+}
+.ul {
+    display: flex;
+    flex-direction: column;
+    border-top: 0.1rem solid var(--primary_color);
+}
+.li {
+    padding: 1.312rem 0.437rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 0.1rem dotted var(--primary_color);
+    span {
+        @include fts(15.31, 27.55);
+        @include ls(40);
+        font-weight: 500;
+        color: var(--primary_color);
+    }
+    i {
+        @include fts(15.31, 27.55);
+        @include ls(40);
+        font-weight: 500;
+        color: var(--primary_color);
+    }
+}
+.buttons {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+.button {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 2.1rem;
+    padding: 2.48rem 2.187rem;
+    border-radius: 0.437rem;
+    transition: opacity 0.16s ease;
+    &.map {
+        background-color: var(--white);
+        border: 0.109rem solid var(--primary_color);
+    }
+    span {
+        @include fts(16.4, 16.4);
+        @include ls(60);
+        font-weight: 700;
+        .map & {
+            color: var(--primary_color);
+        }
+    }
+    svg {
+        width: 0.984rem;
+        height: 1.531rem;
+        * {
+            fill: var(--primary_color);
+        }
+    }
+}

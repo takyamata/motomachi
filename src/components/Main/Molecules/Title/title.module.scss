@@ -1,0 +1,21 @@
+@use "@mixin" as *;
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.312rem;
+}
+.text {
+    @include fts(24.05, 38.49);
+    @include ls(14);
+    font-weight: 700;
+    white-space: pre-line;
+    &.green {
+        color: var(--primary_color);
+    }
+    &.white {
+        color: var(--white);
+    }
+}
